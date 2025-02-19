@@ -1,4 +1,4 @@
-/* Base styles remain the same */
+
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 
 * {
@@ -20,7 +20,7 @@ body {
     justify-content: center;
 }
 
-/* Header responsive styles */
+
 header {
     width: 100%;
     height: auto;
@@ -77,7 +77,7 @@ header {
     font-size: 14px;
 }
 
-/* Container phrases responsive styles */
+
 .container-phrases {
     position: fixed;
     width: 95%;
@@ -94,7 +94,7 @@ header {
     transform-origin: center;
     will-change: transform, opacity;
     text-align: center;
-    font-size: clamp(2rem, 5vw, 4.375rem); /* 32px to 70px */
+    font-size: clamp(2rem, 5vw, 4.375rem); 
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -102,7 +102,7 @@ header {
 }
 
 .container-phrase span[style*="font-size: 20px"] {
-    font-size: clamp(0.875rem, 2vw, 1.25rem) !important; /* 14px to 20px */
+    font-size: clamp(0.875rem, 2vw, 1.25rem) !important; 
 }
 
 .hl {
@@ -138,7 +138,7 @@ header {
     color: #e4e4e7;
 }
 
-/* Media Queries */
+
 @media screen and (max-width: 768px) {
     .container-head {
         width: 95%;
@@ -195,7 +195,7 @@ header {
     }
 }
 
-/* Touch device optimization */
+
 @media (hover: none) {
     .container-phrase button:active,
     .contianer-lnk button:active {
