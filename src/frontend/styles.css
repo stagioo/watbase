@@ -1,0 +1,204 @@
+/* Base styles remain the same */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Bricolage Grotesque", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+/* Header responsive styles */
+header {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    background-color: inherit;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container-head {
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid #ededed;
+}
+
+.contianer-logo img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+.contianer-lnk {
+    display: flex;
+    margin-left: auto;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contianer-lnk button {
+    border: 1px solid #b9b9b9;
+    padding: 6px 15px;
+    cursor: pointer;
+    background: inherit;
+    border-radius: 20px;
+    color: #202020;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.contianer-lnk a {
+    text-decoration: none;
+    color: #202020;
+    font-size: 14px;
+}
+
+/* Container phrases responsive styles */
+.container-phrases {
+    position: fixed;
+    width: 95%;
+    max-width: 1400px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-phrase {
+    width: 100%;
+    position: absolute;
+    transform-origin: center;
+    will-change: transform, opacity;
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 4.375rem); /* 32px to 70px */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.container-phrase span[style*="font-size: 20px"] {
+    font-size: clamp(0.875rem, 2vw, 1.25rem) !important; /* 14px to 20px */
+}
+
+.hl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.container-phrase input {
+    font-size: clamp(1.5rem, 4vw, 4.375rem);
+    width: 90%;
+    max-width: 600px;
+    border: none;
+    outline: none;
+    text-align: center;
+    background-color: inherit;
+}
+
+.container-phrase button {
+    border: 1px solid #b9b9b9;
+    padding: 8px 25px;
+    cursor: pointer;
+    background: inherit;
+    border-radius: 20px;
+    color: #202020;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-weight: bold;
+}
+
+.container-phrase input::placeholder {
+    color: #e4e4e7;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .container-head {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .contianer-logo img {
+        width: 100px;
+    }
+
+    .contianer-lnk {
+        gap: 10px;
+    }
+
+    .contianer-lnk button {
+        padding: 5px 12px;
+        font-size: 12px;
+    }
+
+    .contianer-lnk a {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .container-head {
+        padding: 8px 12px;
+        gap: 10px;
+    }
+
+    .contianer-logo img {
+        width: 80px;
+    }
+
+    .contianer-lnk {
+        gap: 8px;
+    }
+
+    .contianer-lnk button {
+        padding: 4px 10px;
+        font-size: 12px;
+    }
+
+    .contianer-lnk a {
+        font-size: 12px;
+    }
+
+    .container-phrase {
+        padding: 15px;
+    }
+}
+
+/* Touch device optimization */
+@media (hover: none) {
+    .container-phrase button:active,
+    .contianer-lnk button:active {
+        background-color: rgba(185, 185, 185, 0.1);
+    }
+}
